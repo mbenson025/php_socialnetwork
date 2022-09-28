@@ -1,0 +1,1 @@
+<!-- load models and views from other controllers -->
