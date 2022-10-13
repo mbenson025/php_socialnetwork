@@ -28,9 +28,16 @@ class Core
 
     //instantiate controller class
     $this->currentController = new $this->currentController;
-
-
     // example: $pages = new Pages
+
+    //check for second part of url
+    if (isset($url[1])) {
+      //check to see if method exists in controller
+      if (method_exists($this->currentController, $url[1])) {
+        $this->currentMethod = $url[1];
+      }
+    }
+    echo $this->currentMethod;
   }
 
   public function getURL()
