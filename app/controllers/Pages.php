@@ -5,13 +5,15 @@ class Pages extends Controller
   {
   }
 
-  //index is the default method(runs when on home page)
+  //index is the default method(homepage)
   public function index()
   {
-    $this->view('index');
+    $data = ['title' => 'Welcome'];
+    $this->view('pages/index', $data);
   }
 
   public function about()
   {
+    $this->view('pages/about');
   }
 }
