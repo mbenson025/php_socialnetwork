@@ -5,6 +5,11 @@ class Pages
   {
   }
 
+  //added public index function to fix homepage
+  public function index()
+  {
+  }
+
   public function about($id)
   {
     echo $id;
