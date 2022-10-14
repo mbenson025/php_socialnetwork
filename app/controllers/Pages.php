@@ -1,17 +1,17 @@
 <?php
-class Pages
+class Pages extends Controller
 {
   public function __construct()
   {
   }
 
-  //added public index function to fix homepage
+  //index is the default method(runs when on home page)
   public function index()
   {
+    $this->view('index');
   }
 
-  public function about($id)
+  public function about()
   {
-    echo $id;
   }
 }
